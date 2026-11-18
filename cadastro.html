@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Quadros 🎨 | Patinhas & Tinta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="aviso-horario">
+    🎨 Painel do ateliê — cadastre as fotos dos quadros e marque os que já foram vendidos. 💖
+  </div>
+
+  <header class="header">
+    <h1>🐾 Cadastro de Quadros 🎨</h1>
+    <nav>
+      <a href="index.html">← Voltar para a loja</a>
+    </nav>
+  </header>
+
+  <section class="cadastro">
+    <h2 id="titulo-form">Cadastrar novo quadro 💖</h2>
+    <form id="form-quadro" class="form-quadro">
+      <label>Nome do quadro
+        <input type="text" id="campo-nome" required placeholder="Ex: Gatinho no Jardim Encantado" />
+      </label>
+
+      <label>Significado / descrição
+        <textarea id="campo-descricao" rows="3" placeholder="O que esse quadro representa..."></textarea>
+      </label>
+
+      <label>Preço (R$)
+        <input type="number" id="campo-preco" min="0" step="0.01" required placeholder="80.00" />
+      </label>
+
+      <label>Emoji do quadro
+        <input type="text" id="campo-emoji" maxlength="8" placeholder="🐱" />
+      </label>
+
+      <label>Foto do quadro
+        <input type="file" id="campo-foto" accept="image/*" />
+      </label>
+
+      <div class="preview" id="preview-foto">🖼️ Nenhuma foto selecionada</div>
+
+      <div class="acoes-form">
+        <button type="submit" class="btn" id="btn-salvar">Salvar quadro 💖</button>
+        <button type="button" class="btn btn-secundario" id="btn-cancelar" hidden>Cancelar edição</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="lista-cadastro">
+    <h2>Quadros cadastrados 🖼️</h2>
+    <p>Marque como <strong>vendido</strong> para que ele saia da tela de venda da loja (ele continua guardado aqui no painel).</p>
+    <div class="grid" id="grid-cadastro"></div>
+  </section>
+
+  <footer class="footer">
+    <p>Feito com 💖 — Patinhas & Tinta | Mossoró-RN</p>
+  </footer>
+
+  <script src="dados.js"></script>
+  <script src="cadastro.js"></script>
+</body>
+</html>
